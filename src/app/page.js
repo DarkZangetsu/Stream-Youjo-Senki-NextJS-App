@@ -2,33 +2,18 @@
 "use client";
 
 import React from 'react';
-import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import Image from 'next/image';
+import { episodes } from '@/components/constants/episodes';
 
 export default function Home() {
-
-  const episodes = [
-    { number: 1, title: "La déesse déchue" },
-    { number: 2, title: "Prologue" },
-    { number: 3, title: "Deus lo vult" },
-    { number: 4, title: "Terrain de campus" },
-    { number: 5, title: "Mon premier bataillon" },
-    { number: 6, title: "À partir de maintenant" },
-    { number: 7, title: "La bataille du fjord" },
-    { number: 8, title: "Feu d'artifice" },
-    { number: 9, title: "Préparations pour l'avancée" },
-    { number: 10, title: "La route vers la victoire" },
-    { number: 11, title: "Résistance" },
-    { number: 12, title: "Comment gagner" },
-  ];
-
   return (
     <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 space-y-12">
       {/* En-tête avec image et informations */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <Image
+          <Image
               src="/youjo-senki.jpg"
               width={400}
               height={600}
@@ -100,17 +85,19 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-gray-100">Épisodes</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {episodes.map((episode) => (
-            <div
+            <Link 
+              href={`/watch/${episode.driveId}`}
               key={episode.number}
-              className="bg-gray-800/30 rounded-lg p-4 hover:bg-gray-800/50 transition-colors duration-200"
             >
-              <div className="flex items-center space-x-4">
-                <span className="text-2xl font-bold text-gray-400">
-                  {episode.number.toString().padStart(2, '0')}
-                </span>
-                <p className="text-gray-200">{episode.title}</p>
+              <div className="bg-gray-800/30 rounded-lg p-4 hover:bg-gray-800/50 transition-colors duration-200 cursor-pointer">
+                <div className="flex items-center space-x-4">
+                  <span className="text-2xl font-bold text-gray-400">
+                    {episode.number.toString().padStart(2, '0')}
+                  </span>
+                  <p className="text-gray-200">{episode.title}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

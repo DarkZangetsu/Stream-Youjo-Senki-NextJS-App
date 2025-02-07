@@ -32,14 +32,6 @@ const Footer = () => {
                                     </span>
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group">
-                                    <span className="relative">
-                                        Contact
-                                        <span className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
-                                    </span>
-                                </Link>
-                            </li>
                         </ul>
                     </div>
 

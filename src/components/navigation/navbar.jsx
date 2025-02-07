@@ -25,13 +25,6 @@ export default function Navbar() {
                             <span className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
                         </Link>
 
-                        <Link href="/Contact"
-                            className='relative group px-3 py-2 text-sm font-medium hover:text-gray-300 transition-colors duration-200'
-                        >
-                            <span>Contact</span>
-                            <span className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
-                        </Link>
-
                         <Link href="https://github.com/DarkZangetsu"
                             target="_blank"
                             rel="noopener noreferrer"
