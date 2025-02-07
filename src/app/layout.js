@@ -1,8 +1,8 @@
 import "./globals.css";
 
 import dynamic from "next/dynamic";
-const Navbar = dynamic(() => import('@/components/navigation/navbar'))
-const Footer = dynamic(() => import('@/components/navigation/footer'))
+const Navbar = dynamic(() => import('@/components/navigation/navbar'));
+const Footer = dynamic(() => import('@/components/navigation/footer'));
 
 export const metadata = {
   title: "Create Next App",
@@ -14,7 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className="flex flex-col min-h-screen _monica-theme-d2f2b383">
         <Navbar />
-        <main className="flex-grow">
+        {/* Ajout d'un padding-top pour décaler le contenu sous le navbar fixe */}
+        <main className="flex-grow pt-[80px]">
           {children}
         </main>
         <Footer />
