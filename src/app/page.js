@@ -80,6 +80,66 @@ export default function Home() {
         </div>
       </section>
 
+        {/* Catalogue des personnages */}
+        <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-gray-100">Personnages</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-gray-800/30 rounded-xl p-4 space-y-3">
+            <div className="aspect-square relative overflow-hidden rounded-lg">
+              <Image
+                src="/characters/tanya.jpeg"
+                alt="Tanya Degurechaff"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-100">Tanya Degurechaff</h3>
+              <p className="text-sm text-gray-400">Commandante du 203e bataillon aérien</p>
+              <p className="text-gray-300 text-sm">
+                Anciennement salaryman japonais réincarné, Tanya est une officière prodige de l'armée impériale, connue pour son intelligence tactique et sa puissance magique exceptionnelle.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800/30 rounded-xl p-4 space-y-3">
+            <div className="aspect-square relative overflow-hidden rounded-lg">
+              <Image
+                src="/characters/viktoriya.jpeg"
+                alt="Viktoriya Ivanovna Serebryakov"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-100">Viktoriya Serebryakov</h3>
+              <p className="text-sm text-gray-400">Lieutenant du 203e bataillon</p>
+              <p className="text-gray-300 text-sm">
+                Officière dévouée et fidèle subordonnée de Tanya. D'origine russe, elle suit Tanya avec une loyauté sans faille malgré les situations périlleuses.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800/30 rounded-xl p-4 space-y-3">
+            <div className="aspect-square relative overflow-hidden rounded-lg">
+              <Image
+                src="/characters/being-x.webp"
+                alt="Being X"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-100">Being X</h3>
+              <p className="text-sm text-gray-400">Entité divine auto-proclamée</p>
+              <p className="text-gray-300 text-sm">
+                L'être mystérieux responsable de la réincarnation de Tanya. Il cherche à lui faire reconnaître l'existence divine à travers des épreuves toujours plus difficiles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Liste des épisodes */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gray-100">Épisodes</h2>
